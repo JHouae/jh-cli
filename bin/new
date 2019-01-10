@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const mkdirpSync = require('fs-extra').mkdirpSync;
+const existsSync = require('fs').existsSync;
+const join = require('path').join;
+const chalk = require('chalk');
+const error = chalk.red;
+
+program
+  .usage('[options] appName')
+  .on('--help', printHelp)
+  .parse(process.argv);
+
+  console.log(program.args);
+  
+if (!program.args[0]) {
+  program.help();
+} else {
+  const dest = join(process.cwd(), program.args[1]);
+  if (existsSync(dest)) {
+    console.error(error('Existing directory here, please run new command for an empty folder!'));
+    process.exit(1);
+  }
+  mkdirpSync(dest);
+  process.chdir(dest);
+  require('../lib/new')(program);
+}
+
+function printHelp() {
+  console.log('  Commands:');
+  console.log();
+  console.log('    dva               Init a new dva application in the current folder');
+  console.log('    simple            Creates a new application');
+  console.log();
+}
