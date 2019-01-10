@@ -1,24 +1,17 @@
+# jjjh-cli
+创建 react&webpack4&less脚手架 
 
-## Generated File Tree
-
+## Start
 ```bash
+# Install
+$ npm install jjjh-cli -g
 
-└── app
-    ├── gitignore
-    ├── package.json
-    ├── public
-    │   └── index.html
-    ├── src
-    │   ├── assets
-    │   ├── components
-    │   ├── index.js
-    │   ├── index.less
-    │   ├── models
-    │   ├── router.js
-    │   ├── routes
-    │   ├── services
-    │   └── utils
-    ├── webpack.config.js
-    ├── webpack.dev.config.js
-    └── webpack.prod.config.js
-```
+# create react app 
+$ jjjh simple myapp 
+react+webpack4纯净版本，类似于create-react-app
+
+# create dva app
+$ jjjh dva myapp
+react+webpack4+dva+antd版本
+[dva](https://github.com/dvajs/dva) .
+

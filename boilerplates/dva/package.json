@@ -44,8 +44,7 @@
     "dva": "^2.4.1",
     "dva-loading": "^2.0.6",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-router-dom": "^4.3.1"
+    "react-dom": "^16.7.0"
   },
   "author": "",
   "license": "ISC"
