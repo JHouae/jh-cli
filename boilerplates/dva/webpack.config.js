@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    pageA: "./src/index.js",
+    page: "./src/index.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"), // 打包文件的输出目录
