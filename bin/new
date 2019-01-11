@@ -11,8 +11,6 @@ program
   .usage('[options] appName')
   .on('--help', printHelp)
   .parse(process.argv);
-
-  console.log(program.args);
   
 if (!program.args[0]) {
   program.help();
