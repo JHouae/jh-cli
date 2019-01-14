@@ -10,6 +10,7 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-import": "^1.11.0",
     "babel-plugin-dva-hmr": "^0.4.1",
     "babel-plugin-transform-runtime": "^6.23.0",
