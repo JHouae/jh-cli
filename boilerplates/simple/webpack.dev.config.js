@@ -5,30 +5,33 @@ config.module.rules.push({
   test: /\.less$/,
   use: [
     {
-      loader: 'style-loader'
+      loader: 'style-loader',
     }, {
-      loader: 'css-loader', options: {
+      loader: 'css-loader',
+      options: {
         modules: true,
-        localIdentName: '[local]--[hash:base64:5]'
-      }
+        localIdentName: '[local]--[hash:base64:5]',
+      },
     }, {
-      loader: 'less-loader', options: {
+      loader: 'less-loader',
+      options: {
         javascriptEnabled: true,
-      }
-    }
+      },
+    },
   ],
   exclude: /node_modules/,
 });
 config.module.rules.push({
   test: /\.less$/,
   use: [{
-    loader: 'style-loader'
+    loader: 'style-loader',
   }, {
-    loader: 'css-loader'
+    loader: 'css-loader',
   }, {
-    loader: 'less-loader', options: {
+    loader: 'less-loader',
+    options: {
       javascriptEnabled: true,
-    }
+    },
   }],
   exclude: /src/,
 });
@@ -40,6 +43,9 @@ config.devServer = {
   hot: true,
   compress: true,
   clientLogLevel: 'none',
+  disableHostCheck: true,
+  host: '0.0.0.0',
+  https: true,
 };
 config.devtool = 'source-map';
 config.plugins.push(
@@ -47,7 +53,7 @@ config.plugins.push(
   new webpack.HotModuleReplacementPlugin(),
   new webpack.DefinePlugin({
     API_URL: JSON.stringify('dev'),
-  })
+  }),
 );
 
 module.exports = config;

@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const config = require('./webpack.base');
+const config = require('./webpack.config.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 config.module.rules.push({
@@ -37,10 +37,8 @@ config.module.rules.push({
   exclude: /src/,
 });
 
-config.plugins.push(
-  new webpack.DefinePlugin({
-    API_URL: JSON.stringify('prod'),
-  })
-);
+config.plugins.push(new webpack.DefinePlugin({
+  API_URL: JSON.stringify('prod'),
+}));
 
 module.exports = config;
