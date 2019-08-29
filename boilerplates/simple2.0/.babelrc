@@ -1,0 +1,33 @@
+
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }],
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ],
+    [
+      "transform-runtime"
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "dva-hmr"
+      ]
+    }
+  }
+}
